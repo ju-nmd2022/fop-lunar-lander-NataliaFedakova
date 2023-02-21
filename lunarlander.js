@@ -185,7 +185,7 @@ function winScreen() {
 let isGameActive = true;
 let acceleration = 0.3;
 let rocketY = 10;
-let speed = 10; 
+let speed = 5; 
 let y = 10;
 let velocity = 2;  
 let state = "start";
@@ -222,6 +222,8 @@ rocket(200, y, keyIsDown(38));
   overScreen();  
 } if (y > 458 && speed < 3){ 
  winScreen();    
+} if (y <-150) {
+  overScreen();
 }
 }
  
