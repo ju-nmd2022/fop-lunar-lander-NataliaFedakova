@@ -1,5 +1,5 @@
 function setup(){
-  createCanvas(600, 700);
+  createCanvas(600, 600);
 }
 
 function startScreen() {
