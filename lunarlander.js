@@ -219,18 +219,17 @@ rocket(200, y, keyIsDown(38));
 } 
   }  
 } if (y > 458 && speed > 3){ 
-  overScreen();  
+  overScreen();   
 } if (y > 458 && speed < 3){ 
  winScreen();    
 } if (y <-150) {
   overScreen();
 }
-}
+} 
  
    
 function mouseClicked() {
   if (state === "start") {  
     state = "game";  
   }  
-}           
-         
+}   
