@@ -324,7 +324,7 @@ noStroke();
 let isGameActive = true;
 let acceleration = 0.3;
 let rocketY = 10;
-let speed = 5; 
+let speed = 1; 
 let y = 10;
 let velocity = 2;   
 let state = "start";
