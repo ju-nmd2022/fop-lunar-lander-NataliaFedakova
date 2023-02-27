@@ -322,7 +322,7 @@ noStroke();
   }
 
 let isGameActive = true;
-let acceleration = 0.2;
+let acceleration = 0.1;
 let rocketY = 10;
 let speed = 3; 
 let y = 10;
