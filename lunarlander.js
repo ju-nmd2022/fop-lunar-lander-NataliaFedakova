@@ -338,7 +338,7 @@ let t = 100;
 
  
 function draw() {   
-if (state === "start") {   
+if (state === "start") {    
     startScreen();
   } else if (state === "game") {
     background(30, 19, 34);
