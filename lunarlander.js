@@ -168,8 +168,8 @@ function startScreen() {
   
   fill(0, 0, 255);
   rect(459, 327, 4);
-  pop();
-
+  pop();   
+  
   }
 
   function overScreen(){
@@ -378,12 +378,15 @@ rocket(200, y, keyIsDown(38));
 } if (y > 458 && speed < 3){   
   background(0, 0, 0, 255, 25);      
     star(0, p);
-    star(295, p);
-    star(565, p);
-    star(835, p);
-    star(1095, p); 
-    star(1380, p);
-    star(1640, p);
+    star(250, p);
+    star(500, p);
+    star(750, p);
+    star(1000, p); 
+    star(1250, p);
+    star(1500, p);
+    star(1750, p);
+    star(2000, p); 
+    star(2250, p);
 
     p = p + speed; 
     p = p + 1;        
