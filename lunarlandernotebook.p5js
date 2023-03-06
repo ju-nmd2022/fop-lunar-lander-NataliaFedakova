@@ -1,0 +1,117 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "I want to create a traditional Lunar Lander game where rocket has to land on the moon as smoothly as possible."
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "First I want to draw our canvas."
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function setup(){\r\n    createCanvas(600, 700);\r\n    background(255, 255, 255);\r\n  }"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "Now I want to draw the rocket."
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function rocket(x, y, fireIsOn){   \r\n    noStroke();\r\n    fill(\"#33c9dd\");\r\n    ellipse(x +100, y + 100, 70, 120);\r\n    if (fireIsOn){\r\n    fill(\"#a1051d\");\r\n    ellipse (x+92, y+ 185, 17, 30);\r\n    ellipse (x+106, y+ 185, 17, 30);\r\n    fill(\"#820006\");\r\n    ellipse(x + 99, y + 188, 20, 40);\r\n    } else {\r\n    } \r\n    fill(\"#afc9cf\");\r\n    ellipse(x + 100, y + 45, 20, 10);\r\n    \r\n    fill(\"#afc9cf\");\r\n    strokeWeight(4);\r\n    stroke(\"#afc9cf\");\r\n    line(x + 100, y + 45, x+100, y+27);\r\n     \r\n    fill(\"#afc9cf\");\r\n    ellipse(x + 100, y + 82, 30);\r\n    \r\n    fill(\"#eeeee\");\r\n    ellipse(x + 100, y + 82, 27); \r\n     \r\n    fill(\"#414141\");\r\n    noStroke(); \r\n    rect(x + 87, y + 156, 25, 7);\r\n    \r\n    fill(\"#6b6b6b\");\r\n    noStroke();\r\n    rect(x + 90, y + 162, 18, 5);\r\n    \r\n    fill(\"#afc9cf\"); \r\n    beginShape();\r\n    vertex(x + 68, y + 120);\r\n    vertex(x + 80, y + 150);\r\n    vertex(x + 53, y + 170);\r\n    endShape();\r\n    \r\n    fill(\"#afc9cf\"); \r\n    beginShape();\r\n    vertex(x + 132, y + 120);\r\n    vertex(x + 120, y + 150);\r\n    vertex(x + 146, y + 170);\r\n    endShape();\r\n    }\r\n\r\n    function draw(){\r\n        background(30, 19, 34);\r\n        rocket(200, 0);\r\n    }"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "Next i will draw a background of my game."
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function gameScreen() { \r\n    push(); \r\n    noStroke();\r\n    fill(\"#df617f\");\r\n    ellipse(137, 0, 450);\r\n    ellipse(490, 600, 450);\r\n  \r\n    fill(\"#df617f\");\r\n    beginShape();\r\n    vertex(0, 710);\r\n    vertex(72, 560);\r\n    vertex(169, 700);  \r\n    endShape();\r\n  \r\n    fill(\"#fc496a\");\r\n    beginShape();\r\n    vertex(129, 700); \r\n    vertex(225, 290);\r\n    vertex(355, 700);\r\n    endShape();\r\n  \r\n    fill(\"#d34761\");\r\n    beginShape(); \r\n    vertex(97, 657);  \r\n    vertex(138, 505);\r\n    vertex(182, 660);\r\n    endShape();\r\n  \r\n  fill (\"#700124\");\r\n  beginShape();\r\n  vertex(0, 710);\r\n  bezierVertex(117, 600, 476, 600, 592, 710);\r\n  endShape();\r\n  \r\n  fill(\"#4c020f\"); \r\n  ellipse(59, 685, 10);\r\n  ellipse(300, 698, 50, 45);\r\n  ellipse(430, 668, 40);\r\n  ellipse(410, 685, 20);\r\n  ellipse(490, 695, 15);\r\n  ellipse(100, 669, 30, 20); \r\n  ellipse(228, 645, 30, 20);\r\n   \r\n  fill (\"#966fd6\");\r\n  ellipse(100, 100, 100, 90);\r\n  \r\n  fill(255, 255, 170);\r\n  ellipse(445, 91, 20);\r\n  \r\n  fill(255, 255, 100);\r\n  ellipse(505, 150, 60);\r\n  \r\n  fill(32, 2, 55);\r\n  ellipse(100, 100, 150, 8); \r\n  \r\n  fill(\"#00ffff\");\r\n  ellipse(460, 460, 150, 130);  \r\n  \r\n  fill(255, 255, 255);\r\n  ellipse(457, 302, 50);\r\n  rect(437, 325, 40, 80);\r\n  ellipse(436, 400, 30, 10);\r\n  ellipse(473, 400, 30, 10);\r\n  \r\n  beginShape();\r\n  fill(255, 255, 255);\r\n  vertex(440, 320);\r\n  bezierVertex(408, 325, 408, 390, 460, 320); \r\n  endShape();\r\n  \r\n  beginShape();\r\n  vertex(470, 320);\r\n  bezierVertex(510, 325, 510, 390, 460, 320);\r\n  endShape();\r\n  \r\n  fill(0, 0, 0); \r\n  ellipse(457, 300, 30);\r\n  \r\n  fill(255, 0, 0);\r\n  rect(459, 327, 10, 8);\r\n  \r\n  fill(0, 0, 255);\r\n  rect(459, 327, 4);\r\n  pop();   \r\n  \r\n  }\r\n\r\n  function draw(){\r\n    background(30, 19, 34);\r\n    rocket(200, 0);\r\n    gameScreen();\r\n}"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "Now i want to make rocket move."
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "let isGameActive = true;\r\nlet acceleration = 0.3;\r\nlet rocketY = 10;\r\nlet speed = 5; \r\nlet y = 10;\r\nlet velocity = 2;   \r\n\r\nfunction draw(){\r\n    background(30, 19, 34);\r\n    gameScreen();\r\n    rocket(200, y, keyIsDown(38));  \r\n  if (isGameActive){    \r\n    y = y + speed;  \r\n    rocketY = rocketY + velocity;     \r\n    speed = speed + acceleration;\r\n    velocity = velocity + acceleration;  \r\n  }\r\n}"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "Make rocket go up whe key 38 is down"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": " \r\n\r\nfunction draw(){\r\n    background(30, 19, 34);\r\n    gameScreen();\r\n    rocket(200, y, keyIsDown(38));  \r\n  if (isGameActive){    \r\n    y = y + speed;  \r\n    rocketY = rocketY + velocity;     \r\n    speed = speed + acceleration;\r\n    velocity = velocity + acceleration;  \r\n  } if (keyIsDown(38)) {  \r\n    y = y - speed;    \r\n    speed = speed - 0.9;     \r\n  }  \r\n}"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "Stop the rocket on the moon."
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function draw(){\r\n  background(30, 19, 34);\r\n  gameScreen();\r\n  rocket(200, y, keyIsDown(38));  \r\nif (isGameActive){    \r\n  y = y + speed;  \r\n  rocketY = rocketY + velocity;     \r\n  speed = speed + acceleration;\r\n  velocity = velocity + acceleration;  \r\n} if (keyIsDown(38)) {  \r\n  y = y - speed;    \r\n  speed = speed - 0.9;     \r\n}  \r\nif (y > 458) {             \r\n    isGameActive = false;      \r\n  } \r\n if (y <-150) {                  \r\n    isGameActive = false;       \r\n  }\r\n}"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "Make win and lose criteria"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function draw(){\r\n    background(30, 19, 34);\r\n    gameScreen();\r\n    rocket(200, y, keyIsDown(38));  \r\n  if (isGameActive){    \r\n    y = y + speed;  \r\n    rocketY = rocketY + velocity;     \r\n    speed = speed + acceleration;\r\n    velocity = velocity + acceleration;  \r\n  } if (keyIsDown(38)) {  \r\n    y = y - speed;    \r\n    speed = speed - 0.9;     \r\n  }  \r\n  if (y > 458) {             \r\n      isGameActive = false;      \r\n    } \r\n   if (y <-150) {                  \r\n      isGameActive = false;       \r\n    }else if (y > 458 && speed < 3) {  \r\n    console.log(\"win\"); \r\n  }    else if (y > 458 && speed > 3) {\r\n    console.log(\"lose\");  \r\n  }\r\n}"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "Create a start screen of the game"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function startScreen() {\r\n    background(0, 0, 0);\r\n    noStroke();\r\n    fill(\"#700124\");\r\n    ellipse(500, 92, 250);\r\n    \r\n    fill(\"#4c020f\"); \r\n    ellipse(467, 83, 10);\r\n    ellipse(577, 13, 10);\r\n    ellipse(457, 113, 30);\r\n    ellipse(557, 83, 20);\r\n    ellipse(507, 183, 30);\r\n    ellipse(457, 13, 20);\r\n    ellipse(407, 63, 40);\r\n    ellipse(507, 63, 40);\r\n    ellipse(547, 143, 20);  \r\n    ellipse(437, 173, 15);  \r\n    fill(255, 255, 255);  \r\n    textSize(30);\r\n    textStyle(\"bold\");   \r\n    textFont('courier');    \r\n    text(\"LUNAR LANDER GAME\", 150, 340);\r\n    textSize(35); \r\n    text(\"PRESS START\", 190, 420);\r\n\r\n    fill(\"#600002\");\r\n    rect(175, 385, 260, 50);\r\n\r\n    fill(255, 255, 255);\r\n    text(\"PRESS START\", 190, 420);\r\n} "
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "Create game over screen"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function overScreen(){\r\n    background(0,0,0); \r\n    noStroke();\r\n    fill(255, 255, 255);\r\n    textSize(35);\r\n    textStyle(\"bold\");\r\n    text(\"GAME OVER\", 209, 200);\r\n    \r\n    fill(\"#600002\");\r\n    rect(185, 255, 240, 50);\r\n    \r\n    fill(255, 255, 255);\r\n    text(\"PLAY AGAIN\", 200, 290);\r\n    \r\n    fill (\"#700124\");\r\n    beginShape();\r\n    vertex(0, 710);\r\n    bezierVertex(7, 500, 476, 400, 592, 710);\r\n    endShape();\r\n    \r\n    fill(\"#4c020f\"); \r\n    ellipse(59, 685, 10);\r\n    ellipse(300, 698, 50, 45);\r\n    ellipse(430, 668, 40);\r\n    ellipse(410, 685, 20);\r\n    ellipse(490, 695, 15);\r\n    ellipse(100, 669, 30, 20); \r\n    ellipse(228, 645, 30, 20);\r\n    ellipse(200, 574, 30);\r\n    ellipse(400, 574, 30);\r\n    ellipse(300, 604, 50);\r\n    ellipse(100, 604, 30, 20);\r\n    \r\n    fill(\"#afc9cf\");\r\n    beginShape();\r\n    vertex(z+101, p+358);\r\n    vertex(z+123, p+340);\r\n    vertex(z+140, p+390);\r\n    endShape();\r\n    fill(\"#414141\");\r\n    rect(z+250, p+330, 10);\r\n    ellipse(z+193, p+344, 20);  \r\n    \r\n    \r\n    fill(\"#414141\");\r\n    beginShape();\r\n    vertex(r+257, d+350);\r\n    vertex(r+237, d+350); \r\n    vertex(r+240, d+390); \r\n    endShape();  \r\n    \r\n    fill(0, 0, 0);\r\n    rect(r+159, d+370, 10);\r\n    rect(r+189, d+300, 10);\r\n    \r\n    fill(\"#afc9cf\");\r\n    rect(r+159, d+370, 30);  \r\n    rect(r+159, d+370, 20);  \r\n\r\n    fill(0,0,0);\r\n    rect(r+190, d+ 393, 15);\r\n\r\n    fill(255, 0, 0); \r\nellipse(272, 520, 20, 60);\r\nellipse(262, 522, 20, 40);\r\nellipse(282, 522, 20, 40);\r\n\r\nellipse(365, 568, 20, 40);\r\nellipse(370, 573, 30, 35);\r\nellipse(360, 573, 30, 35);\r\n\r\nfill(0, 0, 0);\r\nrect(254, 541, 60, 30); \r\nbeginShape();\r\nvertex(227, 550);\r\nvertex(197, 550);\r\nvertex(240, 590);\r\nendShape(); \r\n\r\nrect(322, 528, 30, 80);\r\nellipse(254, 572, 30);\r\nrect(283, 567, 20);\r\n\r\nfill(255, 0, 0);\r\nellipse(365, 568, 20, 40);\r\nellipse(370, 573, 30, 35);\r\nellipse(360, 573, 30, 35);\r\n\r\nnoStroke(); \r\n  push();\r\n  rotate(0.3);\r\n  translate(267, 267);\r\n      fill(\"#33c9dd\");\r\n      ellipse(o +100, t + 100, 70, 120);\r\n      fill(\"#afc9cf\");\r\n      ellipse(o + 100, t + 45, 20, 10);\r\n      \r\n      fill(\"#afc9cf\");\r\n      strokeWeight(4);\r\n      stroke(\"#afc9cf\");\r\n       \r\n      fill(\"#afc9cf\");\r\n      ellipse(o + 100, t + 82, 30);\r\n      \r\n      fill(\"#eeeee\");\r\n      ellipse(o + 160, t + 122, 27); \r\n       \r\n      fill(\"#414141\");\r\n      noStroke(); \r\n      rect(o + 87, t + 156, 25, 7);\r\n      \r\n      fill(\"#6b6b6b\");\r\n      noStroke();\r\n      rect(o + 90, t + 162, 18, 5);\r\n      \r\n      fill(\"#afc9cf\"); \r\n      beginShape();\r\n      vertex(o + 68, t + 120);\r\n      vertex(o + 80, t + 150);   \r\n      vertex(o + 53, t + 170);\r\n      endShape(); \r\n      \r\n      pop();\r\n }"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "Now create win screen"
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "function star(z ,p){\r\n    background(0, 0, 0, 0);\r\n    fill(\"#fcd800\");\r\n    push();\r\n    scale(0.3);\r\n    beginShape();\r\n    vertex(z + 230,p + 80);\r\n    vertex(z + 150, p +80);\r\n    vertex(z +120, p-5);\r\n    vertex(z + 80,p+80);\r\n    vertex(z, p +80);\r\n    vertex(z + 65,p + 135);\r\n    vertex(z + 40, p+205);\r\n    vertex(z + 115, p + 165);\r\n    vertex(z + 190, p+205);\r\n    vertex(z + 165, p + 135);\r\n    endShape(CLOSE); \r\n    pop();\r\n    \r\n    fill(255, 255, 255);\r\n    textSize(35);\r\n    text(\"YOU WON\", 230, 380); \r\n    }"
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "Connect all the screen together into one game and make the game start on click."
+  },
+  {
+    "kind": 2,
+    "language": "javascript",
+    "value": "let state = \"start\";\r\nlet gameTimer = 0;\r\nlet z =100;\r\nlet p = 100; \r\nlet r = 100;\r\nlet d = 100;\r\nlet o = 100;\r\nlet t = 100;\r\n\r\n \r\nfunction draw() {   \r\nif (state === \"start\") {   \r\n    startScreen();\r\n  } else if (state === \"game\") {\r\n    background(30, 19, 34);\r\n    gameScreen(); \r\nrocket(200, y, keyIsDown(38));  \r\n  if (isGameActive){    \r\n    y = y + speed;  \r\n    rocketY = rocketY + velocity;     \r\n    speed = speed + acceleration;\r\n    velocity = velocity + acceleration;    \r\n  if (keyIsDown(38)) {  \r\n    y = y - speed;    \r\n    speed = speed - 0.9;     \r\n  }  \r\n  if (y > 458) {             \r\n    isGameActive = false;      \r\n  } \r\n if (y <-150) {                  \r\n    isGameActive = false;       \r\n  }    \r\n  else if (y > 458 && speed < 3) {  \r\n  console.log(\"win\"); \r\n}    else if (y > 458 && speed > 3) {\r\n  console.log(\"lose\");  \r\n}\r\n  }    \r\n} if (y > 458 && speed > 3){  \r\n  overScreen();\r\n  p = p - speed; \r\n  z = z - speed;\r\n  p = p-1; \r\n  z = z-1;     \r\n  r = r + speed; \r\n  d = d - speed;\r\n  r = r-1;  \r\n  d = d-1;   \r\n} if (y > 458 && speed < 3){   \r\n  background(0, 0, 0, 255, 25);      \r\n    star(0, p);\r\n    star(295, p);\r\n    star(565, p);\r\n    star(835, p);\r\n    star(1095, p); \r\n    star(1380, p);\r\n    star(1640, p);\r\n\r\n    p = p + speed; \r\n    p = p + 1;        \r\n} if (y <-150) { \r\n  overScreen();\r\n} else if (state === \"over\") {     \r\n  startScreen();       \r\n}  \r\n}  \r\n \r\n   \r\nfunction mouseClicked() {\r\n  if (state === \"start\") {    \r\n    state = \"game\";    \r\n  } else if (state === \"over\") {    \r\n    state = \"start\";    \r\n}        \r\n}   "
+  }
+]
