@@ -1,5 +1,6 @@
 function setup(){
   createCanvas(600, 700);
+   button.position(425, 250); 
   button = createButton("PLAY AGAIN");
   button.size(200, 50);
   button.hide();
