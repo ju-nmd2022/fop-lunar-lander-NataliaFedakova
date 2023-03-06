@@ -1,6 +1,13 @@
 function setup(){
   createCanvas(600, 700);
-}
+  button = createButton("PLAY AGAIN");
+  button.position(225, 250); 
+  button.size(200, 50);
+  button.hide();
+  button.mousePressed(playAgain);  
+  button.style("background-color:#600002");
+}  
+
 
 function startScreen() {
     background(0, 0, 0);
@@ -32,6 +39,7 @@ function startScreen() {
 
     fill(255, 255, 255);
     text("PRESS START", 190, 420);
+    button.hide();
 
     
     } 
@@ -168,6 +176,7 @@ function startScreen() {
   
   fill(0, 0, 255);
   rect(459, 327, 4);
+  button.hide();
   pop();   
   
   }
@@ -180,13 +189,12 @@ function startScreen() {
     textStyle("bold");
     text("GAME OVER", 209, 200);
     
-    fill("#600002");
-    rect(185, 255, 240, 50);
     
-    fill(255, 255, 255);
-    text("PLAY AGAIN", 200, 290);
+    fill(255, 255, 255);   
+    button.show();
+    button.position(225, 250);   
     
-    fill ("#700124");
+    fill ("#700124"); 
     beginShape();
     vertex(0, 710);
     bezierVertex(7, 500, 476, 400, 592, 710);
@@ -319,6 +327,8 @@ noStroke();
   fill(255, 255, 255);
   textSize(35);
   text("YOU WON", 230, 380); 
+  button.show();
+  button.position(225, 450); 
   }
 
 let isGameActive = true;
@@ -335,7 +345,6 @@ let r = 100;
 let d = 100;
 let o = 100;
 let t = 100;
-
  
 function draw() {   
 if (state === "start") {    
@@ -357,7 +366,7 @@ rocket(200, y, keyIsDown(38));
     isGameActive = false;      
   } 
  if (y <-150) {                  
-    isGameActive = false;       
+    isGameActive = false;        
   }    
   else if (y > 458 && speed < 3) {  
   console.log("win"); 
@@ -399,10 +408,18 @@ rocket(200, y, keyIsDown(38));
  
    
 function mouseClicked() {
-  if (state === "start") {    
-    state = "game";    
-  } else if (state === "over") {    
-    state = "start";    
+  if (state === "start") {     
+    state = "game";       
 }        
-}         
-  
+}   
+
+function playAgain(){
+  state = "game";
+   isGameActive = true; 
+ acceleration = 0.1;
+rocketY = 10;
+ speed = 3; 
+ y = 10; 
+ velocity = 2;    
+
+}
