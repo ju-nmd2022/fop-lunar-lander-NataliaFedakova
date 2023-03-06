@@ -420,6 +420,12 @@ function playAgain(){
 rocketY = 10;
  speed = 3; 
  y = 10; 
- velocity = 2;    
+ velocity = 2;   
+   z =100;
+p = 100; 
+ r = 100;
+ d = 100;
+ o = 100;
+t = 100;
 
 }
