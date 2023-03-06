@@ -1,12 +1,11 @@
 function setup(){
   createCanvas(600, 700);
   button = createButton("PLAY AGAIN");
-  button.position(225, 250); 
   button.size(200, 50);
   button.hide();
   button.mousePressed(playAgain);  
   button.style("background-color:#600002");
-}  
+}   
 
 
 function startScreen() {
@@ -420,12 +419,5 @@ function playAgain(){
 rocketY = 10;
  speed = 3; 
  y = 10; 
- velocity = 2;   
-   z =100;
-p = 100; 
- r = 100;
- d = 100;
- o = 100;
-t = 100;
-
+ velocity = 2;    
 }
