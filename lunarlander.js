@@ -1,12 +1,12 @@
 function setup(){
   createCanvas(600, 700);
-   button.position(425, 250); 
   button = createButton("PLAY AGAIN");
+  button.position(225, 250); 
   button.size(200, 50);
   button.hide();
   button.mousePressed(playAgain);  
   button.style("background-color:#600002");
-}   
+}  
 
 
 function startScreen() {
