@@ -192,7 +192,7 @@ function startScreen() {
     
     fill(255, 255, 255);   
     button.show();
-    button.position(660, 250);   
+    button.position(663, 250);   
     
     fill ("#700124"); 
     beginShape();
@@ -328,7 +328,7 @@ noStroke();
   textSize(35);
   text("YOU WON", 230, 380); 
   button.show();
-  button.position(675, 450); 
+  button.position(673, 450); 
   }
 
 let isGameActive = true;
