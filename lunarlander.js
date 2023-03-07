@@ -192,7 +192,7 @@ function startScreen() {
     
     fill(255, 255, 255);   
     button.show();
-    button.position(669, 250);   
+    button.position(675, 250);   
     
     fill ("#700124"); 
     beginShape();
