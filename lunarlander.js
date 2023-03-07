@@ -1,7 +1,7 @@
 function setup(){
   createCanvas(600, 700);
   button = createButton("PLAY AGAIN");
-  button.position(425, 250); 
+  button.position(525, 250); 
   button.size(200, 50);
   button.hide();
   button.mousePressed(playAgain);  
@@ -192,7 +192,7 @@ function startScreen() {
     
     fill(255, 255, 255);   
     button.show();
-    button.position(425, 250);   
+    button.position(525, 250);   
     
     fill ("#700124"); 
     beginShape();
@@ -328,7 +328,7 @@ noStroke();
   textSize(35);
   text("YOU WON", 230, 380); 
   button.show();
-  button.position(425, 450); 
+  button.position(525, 450); 
   }
 
 let isGameActive = true;
